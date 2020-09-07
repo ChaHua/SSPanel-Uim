@@ -49,23 +49,6 @@
 <script src="https://cdn.jsdelivr.net/gh/ajlkn/skel@3.0.1/dist/skel.min.js"></script>
 <script src="/assets/js/util.js"></script>
 <script src="/assets/js/main.js"></script>
-
-{if !is_null($exceptionId)}
-<script src="https://cdn.jsdelivr.net/npm/@sentry/browser@5.20.1/build/bundle.min.js" integrity="sha256-EIV/iYkbXFgnuIHEdltBOK4eY58n87ADisyDI8/VJPg=" crossorigin="anonymous"></script>
-<script>
-    Sentry.init({
-        dsn: "{$config['sentry_dsn']}"
-    });
-    Sentry.showReportDialog({
-        eventId: '{$exceptionId}',
-        user: {
-            name: '{$user->user_name}',
-            email: '{$user->email}'
-        }
-    });
-</script>
-{/if}
-
 </body>
 
 </html>

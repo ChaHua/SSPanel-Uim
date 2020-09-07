@@ -535,4 +535,4 @@ $_ENV['relay_insecure_mode']    = false;       //强烈推荐不开启
 
 #是否夹带统计代码，自己在 resources/views/{主题名} 下创建一个 analytics.tpl ，如果有必要就用 literal 界定符
 $_ENV['enable_analytics_code']  = false;
-$_ENV['sspanelAnalysis']        = true;
+$_ENV['sspanelAnalysis']        = false;
