@@ -144,7 +144,7 @@ class BoughtLogController extends AdminController
         if ($buy_type != 0) {
             if (bccomp($user->money, $shop->price, 2) == -1) {
                 $res['ret'] = 0;
-                $res['msg'] = '喵喵喵~ 该用户余额不足。';
+                $res['msg'] = '该用户余额不足。';
                 return $response->getBody()->write(json_encode($res));
             }
             $user->money = bcsub($user->money, $shop->price, 2);

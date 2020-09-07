@@ -133,7 +133,7 @@ class DefaultConfig
             'Telegram.string.Diary' => [
                 'key'           => $key,
                 'type'          => 'string',
-                'value'         => ('各位老爷少奶奶，我来为大家报告一下系统今天的运行状况哈~' . PHP_EOL . '今日签到人数：%getTodayCheckinUser%' . PHP_EOL . '今日使用总流量：%lastday_total%' . PHP_EOL . '晚安~'),
+                'value'         => ('今天的运行状况' . PHP_EOL . '今日签到人数：%getTodayCheckinUser%' . PHP_EOL . '今日使用总流量：%lastday_total%' . PHP_EOL . '晚安~'),
                 'name'          => '自定义向 Telegram 群组推送系统今天的运行状况的信息',
                 'comment'       => '可用变量：' . PHP_EOL . '[今日签到人数] %getTodayCheckinUser%' . PHP_EOL . '[今日使用总流量] %lastday_total%',
                 'operator_id'   => 0,
@@ -152,7 +152,7 @@ class DefaultConfig
             'Telegram.string.DailyJob' => [
                 'key'           => $key,
                 'type'          => 'string',
-                'value'         => '姐姐姐姐，数据库被清理了，感觉身体被掏空了呢~',
+                'value'         => '数据库被清理了',
                 'name'          => '自定义向 Telegram 群组推送数据库清理通知的信息',
                 'comment'       => '',
                 'operator_id'   => 0,
@@ -171,7 +171,7 @@ class DefaultConfig
             'Telegram.string.NodeOffline' => [
                 'key'           => $key,
                 'type'          => 'string',
-                'value'         => '喵喵喵~ %node_name% 节点掉线了喵~',
+                'value'         => '%node_name% 节点掉线了喵~',
                 'name'          => '自定义向 Telegram 群组推送节点掉线通知的信息',
                 'comment'       => '可用变量：' . PHP_EOL . '[节点名称] %node_name%',
                 'operator_id'   => 0,
@@ -190,7 +190,7 @@ class DefaultConfig
             'Telegram.string.NodeOnline' => [
                 'key'           => $key,
                 'type'          => 'string',
-                'value'         => '喵喵喵~ %node_name% 节点恢复了喵~',
+                'value'         => '%node_name% 节点恢复了喵~',
                 'name'          => '自定义向 Telegram 群组推送节点上线通知的信息',
                 'comment'       => '可用变量：' . PHP_EOL . '[节点名称] %node_name%',
                 'operator_id'   => 0,
@@ -209,7 +209,7 @@ class DefaultConfig
             'Telegram.string.NodeGFW' => [
                 'key'           => $key,
                 'type'          => 'string',
-                'value'         => '喵喵喵~ %node_name% 节点被墙了喵~',
+                'value'         => '%node_name% 节点被墙了喵~',
                 'name'          => '自定义向 Telegram 群组推送节点被墙通知的信息',
                 'comment'       => '可用变量：' . PHP_EOL . '[节点名称] %node_name%',
                 'operator_id'   => 0,
@@ -228,7 +228,7 @@ class DefaultConfig
             'Telegram.string.NodeGFW_recover' => [
                 'key'           => $key,
                 'type'          => 'string',
-                'value'         => '喵喵喵~ %node_name% 节点恢复了喵~',
+                'value'         => '%node_name% 节点恢复了喵~',
                 'name'          => '自定义向 Telegram 群组推送节点被墙恢复通知的信息',
                 'comment'       => '可用变量：' . PHP_EOL . '[节点名称] %node_name%',
                 'operator_id'   => 0,

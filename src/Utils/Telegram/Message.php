@@ -147,11 +147,6 @@ class Message
             // 机器人加入新群组
             if ($_ENV['allow_to_join_new_groups'] !== true && !in_array($this->ChatID, $_ENV['group_id_allowed_to_join'])) {
                 // 退群
-                $this->replyWithMessage(
-                    [
-                        'text' => '不约，叔叔我们不约.'
-                    ]
-                );
                 TelegramTools::SendPost(
                     'kickChatMember',
                     [
@@ -169,12 +164,6 @@ class Message
                         );
                     }
                 }
-            } else {
-                $this->replyWithMessage(
-                    [
-                        'text' => '同志们好，同志们辛苦了.'
-                    ]
-                );
             }
         } else {
             // 新成员加入群组
@@ -204,7 +193,7 @@ class Message
                 return;
             }
             if ($_ENV['enable_welcome_message'] === true) {
-                $text = ($NewUser->class >= 1 ? '欢迎 VIP' . $NewUser->class . ' 用户 ' . $Member['name'] . '回到组织.' : '欢迎 ' . $Member['name']);
+                $text = ($NewUser->class >= 1 ? '欢迎 VIP' . $NewUser->class . ' 用户 ' . $Member['name']: '欢迎 ' . $Member['name']);
                 $this->replyWithMessage(
                     [
                         'text' => $text

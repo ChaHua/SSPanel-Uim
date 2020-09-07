@@ -289,9 +289,9 @@ class UserController extends BaseController
 
             if ($_ENV['enable_donate'] == true) {
                 if ($this->user->is_hide == 1) {
-                    Telegram::Send('姐姐姐姐，一位不愿透露姓名的大老爷给我们捐了 ' . $codeq->number . ' 元呢~');
+                    Telegram::Send('一位不愿透露姓名的用户给我们捐了 ' . $codeq->number . ' 元呢~');
                 } else {
-                    Telegram::Send('姐姐姐姐，' . $this->user->user_name . ' 大老爷给我们捐了 ' . $codeq->number . ' 元呢~');
+                    Telegram::Send($this->user->user_name . ' 给我们捐了 ' . $codeq->number . ' 元呢~');
                 }
             }
 
@@ -762,7 +762,7 @@ class UserController extends BaseController
 
         if (bccomp($user->money, $price, 2) == -1) {
             $res['ret'] = 0;
-            $res['msg'] = '喵喵喵~ 当前余额不足，总价为' . $price . '元。</br><a href="/user/code">点击进入充值界面</a>';
+            $res['msg'] = '当前余额不足，总价为' . $price . '元。</br><a href="/user/code">点击进入充值界面</a>';
             return $response->getBody()->write(json_encode($res));
         }
 
@@ -867,7 +867,7 @@ class UserController extends BaseController
 
         if (bccomp($user->money, $price, 2) == -1) {
             $res['ret'] = 0;
-            $res['msg'] = '喵喵喵~ 当前余额不足，总价为' . $price . '元。</br><a href="/user/code">点击进入充值界面</a>';
+            $res['msg'] = '当前余额不足，总价为' . $price . '元。</br><a href="/user/code">点击进入充值界面</a>';
             return $response->getBody()->write(json_encode($res));
         }
 
