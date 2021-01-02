@@ -24,6 +24,7 @@ use App\Services\{
 };
 use voku\helper\AntiXSS;
 use Exception;
+use Ramsey\Uuid\Uuid;
 
 /**
  *  AuthController
@@ -338,7 +339,9 @@ class AuthController extends BaseController
         }
 
         //dumplin：1、邀请人等级为0则邀请码不可用；2、邀请人invite_num为可邀请次数，填负数则为无限
-        $c = InviteCode::where('code', $code)->first();
+        if ($code != null){
+            $c = InviteCode::where('code', $code)->first();
+        }
         if ($c == null) {
             if (Config::getconfig('Register.string.Mode') === 'invite') {
                 $res['ret'] = 0;
@@ -368,13 +371,14 @@ class AuthController extends BaseController
 
         // do reg user
         $user                       = new User();
-
         $antiXss                    = new AntiXSS();
+        $current_timestamp          = time();
 
         $user->user_name            = $antiXss->xss_clean($name);
         $user->email                = $email;
         $user->pass                 = Hash::passwordHash($passwd);
         $user->passwd               = Tools::genRandomChar(6);
+        $user->uuid                 = Uuid::uuid3(Uuid::NAMESPACE_DNS, $email . '|' . $current_timestamp);
         $user->port                 = Tools::getAvPort();
         $user->t                    = 0;
         $user->u                    = 0;
@@ -457,8 +461,7 @@ class AuthController extends BaseController
         $email = strtolower($email);
         $passwd = $request->getParam('passwd');
         $repasswd = $request->getParam('repasswd');
-        $code = $request->getParam('code');
-        $code = trim($code);
+        $code = trim($request->getParam('code'));
         $imtype = $request->getParam('imtype');
         $emailcode = $request->getParam('emailcode');
         $emailcode = trim($emailcode);

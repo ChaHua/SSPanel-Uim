@@ -13,7 +13,7 @@ It will not impact the appearance and can give developers a lot of support :)
 </footer>
 
 <!-- js -->
-<script src="https://cdn.jsdelivr.net/npm/jquery@2.2.1"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1"></script>
 {if isset($geetest_html)}
     <script src="//static.geetest.com/static/tools/gt.js"></script>
 {/if}
@@ -21,4 +21,5 @@ It will not impact the appearance and can give developers a lot of support :)
 <script src="/theme/material/js/project.min.js"></script>
 
 </body>
+
 </html>

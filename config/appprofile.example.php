@@ -33,8 +33,8 @@ $_ENV['Surge_Profiles'] = [
             'socks5-listen'               => '0.0.0.0:8235',
             'wifi-access-http-port'       => 6152,
             'wifi-access-socks5-port'     => 6153,
-            'internet-test-url'           => 'http://baidu.com',
-            'proxy-test-url'              => 'http://www.qualcomm.cn/generate_204',
+            'internet-test-url'           => 'http://wifi.vivo.com.cn/generate_204',
+            'proxy-test-url'              => 'http://cp.cloudflare.com',
             'test-timeout'                => 3
         ],
         'Proxy' => [
@@ -257,7 +257,6 @@ $_ENV['Clash_Profiles'] = [
             'listen'              => '0.0.0.0:53',
             'enhanced-mode'       => 'fake-ip',
             'fake-ip-range'       => '198.18.0.1/16',
-            'enable'              => true,
             'nameserver'=>[
                 '114.114.114.114',
                 'tcp://223.5.5.5'

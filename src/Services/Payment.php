@@ -18,8 +18,6 @@ use App\Services\Gateway\{
     PAYJS,
     YftPay,
     BitPayX,
-    TomatoPay,
-    IDtPay,
     StripePay
 };
 
@@ -45,10 +43,6 @@ class Payment
                 return new YftPay();
             case ('bitpayx'):
                 return new BitPayX($_ENV['bitpay_secret']);
-            case ("tomatopay"):
-                return new TomatoPay();
-            case ("idtpay"):
-                return new IDtPay();
             case ("stripe"):
                 return new StripePay();
             default:
