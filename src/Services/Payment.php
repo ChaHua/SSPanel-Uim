@@ -19,7 +19,8 @@ use App\Services\Gateway\{
     YftPay,
     BitPayX,
     TomatoPay,
-    IDtPay
+    IDtPay,
+    StripePay
 };
 
 class Payment
@@ -48,6 +49,8 @@ class Payment
                 return new TomatoPay();
             case ("idtpay"):
                 return new IDtPay();
+            case ("stripe"):
+                return new StripePay();
             default:
                 return null;
         }
