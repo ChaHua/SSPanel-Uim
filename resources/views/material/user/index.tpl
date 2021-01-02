@@ -255,16 +255,8 @@ table tr td:first-child {
                         <div class="card-main">
                             <div class="card-inner">
                                 <div class="cardbtn-edit">
-                                    <div class="card-heading"><i class="icon icon-md">phonelink</i> 快速使用</div>
+                                    <div class="card-heading"><i class="icon icon-md">phonelink</i> 订阅中心</div>
                                 </div>
-                                <nav class="tab-nav margin-top-no">
-                                    <ul class="nav nav-list">
-                                        <li class="active">
-                                            <a class="" data-toggle="tab" href="#sub_center"><i class="icon icon-lg">info_outline</i>&nbsp;订阅中心</a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                                <div class="card-inner">
                                     <div class="tab-content">
                                         <div class="tab-pane fade active in" id="sub_center">
                                             <nav class="tab-nav margin-top-no">
@@ -677,7 +669,6 @@ table tr td:first-child {
                                             {/if}
                                             </div>
                                         </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
