@@ -262,81 +262,10 @@ table tr td:first-child {
                                         <li class="active">
                                             <a class="" data-toggle="tab" href="#sub_center"><i class="icon icon-lg">info_outline</i>&nbsp;订阅中心</a>
                                         </li>
-                                        <li>
-                                            <a class="" data-toggle="tab" href="#info_center"><i class="icon icon-lg">flight_takeoff</i>&nbsp;连接信息</a>
-                                        </li>
                                     </ul>
                                 </nav>
                                 <div class="card-inner">
                                     <div class="tab-content">
-                                        <div class="tab-pane fade" id="info_center">
-                                            <p>您的链接信息：</p>
-                                            {if URL::SSRCanConnect($user)}
-                                                {$user = URL::getSSRConnectInfo($pre_user)}
-                                                <table class="table">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td><strong>端口</strong></td>
-                                                            <td>{$user->port}</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><strong>密码</strong></td>
-                                                            <td>{$user->passwd}</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><strong>自定义加密</strong></td>
-                                                            <td>{$user->method}</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><strong>自定义协议</strong></td>
-                                                            <td>{$user->protocol}</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><strong>自定义混淆</strong></td>
-                                                            <td>{$user->obfs}</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><strong>自定义混淆参数</strong></td>
-                                                            <td>{$user->obfs_param}</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                                <hr/>
-                                                <p>您好，您目前的 加密方式，混淆或协议 适用于 SSR 客户端，请您选用支持 SSR 的客户端来连接，或者到 <a href="/user/edit">资料编辑</a> 页面修改后再来查看此处。</p>
-                                                <p>同时, ShadowsocksR 单端口多用户的连接不受您设置的影响，您可以在此使用相应的客户端进行连接</p>
-                                            {elseif URL::SSCanConnect($user)}
-                                                {$user = URL::getSSConnectInfo($pre_user)}
-                                                <table class="table">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td><strong>端口</strong></td>
-                                                            <td>{$user->port}</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><strong>密码</strong></td>
-                                                            <td>{$user->passwd}</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><strong>自定义加密</strong></td>
-                                                            <td>{$user->method}</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><strong>自定义混淆</strong></td>
-                                                            <td>{$user->obfs}</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><strong>自定义混淆参数</strong></td>
-                                                            <td>{$user->obfs_param}</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                                <hr/>
-                                                <p>您好，您目前的 加密方式，混淆或协议 适用于 SS 客户端，请您选用支持 SS 协议的客户端来连接，或者到 <a href="/user/edit">资料编辑</a> 页面修改后再来查看此处。</p>
-                                                <p>同时, Shadowsocks 单端口多用户的连接不受您设置的影响，您可以在此使用相应的客户端进行连接</p>
-                                            {else}
-                                                <p>您的账户连接信息存在异常，请联系管理员</p>
-                                            {/if}
-                                        </div>
                                         <div class="tab-pane fade active in" id="sub_center">
                                             <nav class="tab-nav margin-top-no">
                                                 <ul class="nav nav-list">
