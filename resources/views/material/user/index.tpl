@@ -356,9 +356,6 @@ table tr td:first-child {
                                                         <a class="" data-toggle="tab" href="#sub_center_android"><i class="icon icon-lg">android</i>&nbsp;Android</a>
                                                     </li>
                                                     <li>
-                                                        <a class="" data-toggle="tab" href="#sub_center_linux"><i class="icon icon-lg">devices_other</i>&nbsp;Linux</a>
-                                                    </li>
-                                                    <li>
                                                         <a class="" data-toggle="tab" href="#sub_center_router"><i class="icon icon-lg">router</i>&nbsp;Router</a>
                                                     </li>
                                                 </ul>
@@ -408,55 +405,7 @@ table tr td:first-child {
                                                 </p>
                                             </div>
                                             <div class="tab-pane fade" id="sub_center_windows">
-                                                <p><span class="icon icon-lg text-white">filter_1</span> SS - [ SS ]：</p>
-                                                    <p>
-                                                        应用下载：
-                                                        <a class="btn-dl" href="{if $config["subscribe_client"]===true}{if $config["subscribe_client_url"]==''}/user/getPcClient{else}{$config["subscribe_client_url"]}/getClient/{$getClient}{/if}?type=ss-win{else}/ssr-download/ss-win.zip{/if}"><i class="material-icons icon-sm">cloud_download</i> 本站下载【高速】</a>
-                                                        .
-                                                        <a class="btn-dl" href="https://github.com/shadowsocks/shadowsocks-windows/releases"><i class="material-icons icon-sm">cloud_download</i> 官方下载</a>
-                                                    </p>
-                                                    <p>
-                                                        使用教程：
-                                                        <a class="btn-dl" href="{if $config['use_this_doc'] === false}/user/tutorial{else}/doc/#/Windows/Shadowsocks{/if}"><i class="material-icons icon-sm">turned_in_not</i> 点击查看</a>
-                                                    </p>
-                                                    <p>
-                                                        使用方式：
-                                                        <a id="win_ss" class="copy-config btn-dl" onclick=Copyconfig("/user/getUserAllURL?type=ss","#win_ss","")><i class="material-icons icon-sm">send</i> 拷贝全部节点 URL</a>
-                                                    </p>
-                                                <hr/>                                            
-                                                <p><span class="icon icon-lg text-white">filter_2</span> SSR(R) - [ SS/SSR ]：</p>
-                                                    <p>
-                                                        应用下载：
-                                                        <a class="btn-dl" href="{if $config["subscribe_client"]===true}{if $config["subscribe_client_url"]==''}/user/getPcClient{else}{$config["subscribe_client_url"]}/getClient/{$getClient}{/if}?type=ssr-win{else}/ssr-download/ssr-win.7z{/if}"><i class="material-icons icon-sm">cloud_download</i> 本站下载【高速】</a>
-                                                        .
-                                                        <a class="btn-dl" href="https://github.com/shadowsocksrr/shadowsocksr-csharp/releases"><i class="material-icons icon-sm">cloud_download</i> 官方下载</a>
-                                                    </p>
-                                                    <p>
-                                                        使用教程：
-                                                        <a class="btn-dl" href="{if $config['use_this_doc'] === false}/user/tutorial{else}/doc/#/Windows/ShadowsocksR{/if}"><i class="material-icons icon-sm">turned_in_not</i> 点击查看</a>
-                                                    </p>
-                                                    <p>
-                                                        使用方式：
-                                                        <a class="copy-text btn-dl" data-clipboard-text="{$subInfo['ssr']}"><i class="material-icons icon-sm">send</i> 拷贝订阅链接</a>
-                                                        .
-                                                        <a id="win_ssr" class="copy-config btn-dl" onclick=Copyconfig("/user/getUserAllURL?type=ssr","#win_ssr","")><i class="material-icons icon-sm">send</i> 拷贝全部节点 URL</a>
-                                                    </p>
-                                                <hr/>
-                                                <p><span class="icon icon-lg text-white">filter_3</span> SSTap - [ SS/SSR ]：</p>
-                                                    <p>
-                                                        应用下载：
-                                                        <a class="btn-dl" href="/ssr-download/SSTap.7z"><i class="material-icons icon-sm">cloud_download</i> 本站下载【高速】</a>
-                                                    </p>
-                                                    <p>
-                                                        使用教程：
-                                                        <a class="btn-dl" href="{if $config['use_this_doc'] === false}/user/tutorial{else}/doc/#/Windows/SSTap{/if}"><i class="material-icons icon-sm">turned_in_not</i> 点击查看</a>
-                                                    </p>
-                                                    <p>
-                                                        使用方式：
-                                                        <a class="copy-text btn-dl" data-clipboard-text="{$subInfo['ssr']}"><i class="material-icons icon-sm">send</i> 拷贝订阅链接</a>
-                                                    </p>
-                                                <hr/>
-                                                <p><span class="icon icon-lg text-white">filter_4</span> V2RayN - [ SS/VMess ]：</p>
+                                                <p><span class="icon icon-lg text-white">filter_1</span> V2RayN - [ SS/VMess ]：</p>
                                                     <p>
                                                         应用下载：
                                                         <a class="btn-dl" href="{if $config["subscribe_client"]===true}{if $config["subscribe_client_url"]==''}/user/getPcClient{else}{$config["subscribe_client_url"]}/getClient/{$getClient}{/if}?type=v2rayn-win{else}/ssr-download/v2rayn.zip{/if}"><i class="material-icons icon-sm">cloud_download</i> 本站下载【高速】</a>
@@ -474,7 +423,7 @@ table tr td:first-child {
                                                         <a id="win_v2rayn" class="copy-config btn-dl" onclick=Copyconfig("/user/getUserAllURL?type=v2ray","#win_v2rayn","")><i class="material-icons icon-sm">send</i> 拷贝全部节点 URL</a>
                                                     </p>
                                                 <hr/>
-                                                <p><span class="icon icon-lg text-white">filter_5</span> Clash for Windows - [ SS/VMess/Trojan ]：</p>
+                                                <p><span class="icon icon-lg text-white">filter_2</span> Clash for Windows - [ SS/VMess/Trojan ]：</p>
                                                     <p>
                                                         应用下载：
                                                         <a class="btn-dl" href="/ssr-download/Clash-Windows.7z"><i class="material-icons icon-sm">cloud_download</i> 本站下载【高速】</a>
@@ -492,7 +441,7 @@ table tr td:first-child {
                                                         <a class="btn-dl" href="clash://install-config?url={urlencode($subInfo['clash'])}"><i class="material-icons icon-sm">send</i> 配置一键导入</a>
                                                     </p>
                                                 <hr/>
-                                                <p><span class="icon icon-lg text-white">filter_6</span> ClashR for Windows - [ SS/SSR/VMess ]：</p>
+                                                <p><span class="icon icon-lg text-white">filter_3</span> ClashR for Windows - [ SS/SSR/VMess ]：</p>
                                                     <p>
                                                         应用下载：
                                                         <a class="btn-dl" href="#"><i class="material-icons icon-sm">cloud_download</i> 暂无下载</a>
@@ -776,13 +725,6 @@ table tr td:first-child {
                                             {/if}
 											</div>
 
-											<div class="tab-pane fade" id="sub_center_linux">
-                                            {if array_key_exists('Linux',$config['userCenterClient'])}
-                                                {if count($config['userCenterClient']['Linux']) != 0}
-                                                    {printClient items=$config['userCenterClient']['Linux']}
-                                                {/if}
-                                            {/if}
-                                            </div>
                                             <div class="tab-pane fade" id="sub_center_router">
                                                 <p><span class="icon icon-lg text-white">filter_1</span> Koolshare 固件路由器/软路由：</p>
                                                     <p>
