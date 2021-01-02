@@ -9,7 +9,7 @@
 
 declare(strict_types=1);
 
-if($_SERVER["HTTP_X_FORWARDED_PROTO"] != "https")
+if($_SERVER["HTTP_X_FORWARDED_PROTO"] != "https" && $_SERVER["HTTPS"] != "on")
 {
     header("Location: https://" . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]);
     exit();
