@@ -9,6 +9,12 @@
 
 declare(strict_types=1);
 
+if($_SERVER["HTTP_X_FORWARDED_PROTO"] != "https")
+{
+    header("Location: https://" . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]);
+    exit();
+}
+
 require __DIR__ . '/../vendor/autoload.php';
 require __DIR__ . '/../config/.config.php';
 require __DIR__ . '/../config/appprofile.php';
