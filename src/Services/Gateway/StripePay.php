@@ -43,7 +43,11 @@ class StripePay extends AbstractPayment
         $currency = json_decode(curl_exec($ch));
         curl_close($ch);
 
-        $price_exchanged = ((double)$price) / ($currency->rates->CNY) * 1.005;
+        $price_exchanged = ((double)$price) / ($currency->rates->CNY) * 1.002;
+
+        if (strtoupper(Config::get('stripe_currency')) !== 'JPY') {
+          $price_exchanged = $price_exchanged * 100;
+        }
 
         $source = Source::create([
             'amount' => floor($price_exchanged),
